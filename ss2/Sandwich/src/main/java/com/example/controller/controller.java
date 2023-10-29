@@ -16,7 +16,7 @@ public class controller {
         return "display";
     }
     @PostMapping(value = "save")
-    public String showSave(@RequestParam("condiment") String[] condiment, Model model){
+    public String showSave(@RequestParam String[] condiment, Model model){
         model.addAttribute("condiment",condiment);
         return "save";
     }

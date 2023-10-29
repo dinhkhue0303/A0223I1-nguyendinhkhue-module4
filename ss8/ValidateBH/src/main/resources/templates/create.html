@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/">quay lại</a>
+<form th:object="${songDto}" action="/create" method="post">
+    name
+    <input th:field="*{name}">
+    <mall style="color:red;" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></mall><br>
+    artist
+    <input th:field="*{artist}">
+    <mall style="color:red;" th:if="${#fields.hasErrors('artist')}" th:errors="*{artist}"></mall><br>
+    type
+    <input th:field="*{type}">
+    <mall style="color:red;" th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></mall><br>
+    <button>save</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/">quay lại</a>
+<form th:object="${music}" action="/update" method="post">
+    id
+    <input disabled th:field="*{id}" th:value="${id}">
+    <input type="hidden" th:field="*{id}">
+    ten bai hat
+    <input th:field="*{tenBaiHat}" th:value="${music.tenBaiHat}">
+    nghe si
+    <input th:field="*{ngheSi}" th:value="${music.ngheSi}">
+    the loai
+    <input th:field="*{theLoai}" th:value="${music.theLoai}">
+    url
+    <input th:field="*{URL}" th:value="${music.URL}">
+    <button>update</button>
+</form>
+</body>
+</html>

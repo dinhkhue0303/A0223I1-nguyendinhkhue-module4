@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>list song</h1>
+<a href="/create">thêm mới</a>
+<p1 th:text="${mess}"></p1>
+<table>
+    <tr>
+        <th>stt</th>
+        <th>id</th>
+        <th>name</th>
+        <th>artist</th>
+        <th>type</th>
+        <th></th>
+    </tr>
+    <tr th:each="item,loop:${list}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${item.id}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.artist}"></td>
+        <td th:text="${item.type}"></td>
+        <td>
+            <a th:href="@{/update/__${item.id}__}">update</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/">quay lại</a>
+<form th:object="${music}">
+    bạn đang nghe bài
+    <span th:text="${music.tenBaiHat}"></span><br>
+    thể loại
+    <span th:text="${music.theLoai}"></span><br>
+    nghệ sĩ trình diễn
+    <span th:text="${music.ngheSi}"></span>
+</form>
+</body>
+</html>

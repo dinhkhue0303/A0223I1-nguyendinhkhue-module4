@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/create">thêm mới</a>
+<table>
+    <tr>
+        <th>STT</th>
+        <th>id</th>
+        <th>ten bai hat</th>
+        <th>nghe si</th>
+        <th>the loai</th>
+        <th>url</th>
+        <th>sua</th>
+        <th>xoa</th>
+        <th>nghe nhac</th>
+    </tr>
+    <tr th:each="music,loop:${ListMusic}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${music.id}"></td>
+        <td th:text="${music.tenBaiHat}"></td>
+        <td th:text="${music.ngheSi}"></td>
+        <td th:text="${music.theLoai}"></td>
+        <td th:text="${music.URL}"></td>
+        <td>
+            <a th:href="@{/update/__${music.id}__}">update</a>
+        </td>
+        <td>
+            <a th:href="@{/delete/__${music.id}__}">delete</a>
+        </td>
+        <td>
+            <a th:href="@{/listen/__${music.id}__}">listen</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

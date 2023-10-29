@@ -5,46 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9668b902-5d65-466a-80c6-492b03df36ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ss1/TienTe/TienTe/src/main/java/com/example/controller/ConvertController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TienTe/TienTe/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TienTe/TienTe/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TienTe/TienTe/src/main/webapp/WEB-INF/views/display.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TienTe/TienTe/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TuDien/TuDien/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TuDien/TuDien/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TuDien/TuDien/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TuDien/TuDien/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TuDien/TuDien/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TuDien/TuDien/src/main/java/com/example/controller/TuDiencontroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TuDien/TuDien/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TuDien/TuDien/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TuDien/TuDien/src/main/webapp/WEB-INF/views/display.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss1/TuDien/TuDien/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Caculator/src/main/java/com/example/controller/controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Caculator/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Caculator/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Caculator/src/main/webapp/WEB-INF/views/display.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Caculator/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/display.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/save.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thuchanh/validateEmail/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thuchanh/validateEmail/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thuchanh/validateEmail/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thuchanh/validateEmail/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thuchanh/validateEmail/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thuchanh/validateEmail/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thuchanh/validateEmail/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thuchanh/validateEmail/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thuchanh/validateEmail/src/main/webapp/WEB-INF/views/success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../thuchanh/validateEmail/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +17,18 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -85,21 +59,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/codegym/Module04/ss2/Sandwich/src/main/webapp/WEB-INF",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "12a953248d4ca4095fd1d5d5bac9ef1c",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/codegym/Module04/ss2/Sandwich&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;12a953248d4ca4095fd1d5d5bac9ef1c&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\codegym\Module04\ss2\Sandwich\src\main\webapp\WEB-INF" />
@@ -204,6 +178,9 @@
       <updated>1694942999839</updated>
       <workItem from="1694943001244" duration="1821000" />
       <workItem from="1694945690363" duration="1809000" />
+      <workItem from="1695038831636" duration="2734000" />
+      <workItem from="1695046235840" duration="869000" />
+      <workItem from="1695208652714" duration="12000" />
     </task>
     <servers />
   </component>

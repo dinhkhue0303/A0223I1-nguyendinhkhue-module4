@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${product}" action="/create" method="post">
+    id
+    <input th:field="*{id}"><br>
+    tên
+    <input th:field="*{ten}"><br>
+    giá
+    <input th:field="*{gia}"><br>
+    mô tả
+    <select th:field="*{moTa}">
+      <option value="con hang">--chọn--</option>
+      <option th:each="item:${ListMoTa}" th:value="${item}" th:text="${item}"></option>
+    </select>
+    nhà SX
+    <block th:each="item:${ListNhaSX}">
+        <input type="checkbox" th:field="*{nhaSX}" th:value="${item}" th:text="${item}">
+    </block>
+    <button>create</button>
+</form>
+</body>
+</html>

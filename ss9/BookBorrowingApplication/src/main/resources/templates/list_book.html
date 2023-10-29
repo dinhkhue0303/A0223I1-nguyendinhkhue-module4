@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    return book
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="/returnBook">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nhập mã sách cần trả</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" name="codeBook">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">abort</button>
+                    <button type="submit" class="btn btn-primary">return</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<p1 th:text="${mess}"></p1>
+<p1 th:text="${codeNumber}"></p1>
+<div>
+    <div class="head">
+    </div>
+    <div class="content">
+        <table class="table table-striped">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Detail</th>
+            </tr>
+            <tr th:each="item:${bookPage}">
+                <td th:text="${item.id}"></td>
+                <td th:text="${item.name}"></td>
+                <td th:text="${item.amount}"></td>
+                <td>
+                    <a th:href="@{/detail/__${item.id}__}" class="btn btn-primary">Detail</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<a th:if="${bookPage.hasPrevious()}" th:href="@{/list/(page=${bookPage.number-1},searchTitle=${searchName})}">Previous</a>
+<span th:text="${bookPage.number+1}"></span>/<span th:text="${bookPage.totalPages}"></span>
+<a th:if="${bookPage.hasNext()}" th:href="@{/list/(page=${bookPage.number+1},searchTitle=${searchName})}">Next</a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

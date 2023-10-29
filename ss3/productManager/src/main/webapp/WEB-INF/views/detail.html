@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    id
+    <input disabled th:value="${product.id}"><br>
+    tên
+    <input disabled th:value="${product.ten}"><br>
+    giá
+    <input disabled th:value="${product.gia}"><br>
+    mô tả
+    <input disabled th:value="${product.moTa}"><br>
+    nhà SX
+    <input disabled th:each="item:${product.nhaSX}" th:value="${item}">
+<a th:href="/"></a>
+</body>
+</html>

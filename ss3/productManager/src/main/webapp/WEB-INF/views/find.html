@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>STT</th>
+        <th>id</th>
+        <th>tên</th>
+        <th>giá</th>
+        <th>mô tả</th>
+        <th>nhà SX</th>
+    </tr>
+    <tr th:each="product,status:${list}">
+        <td th:text="${status.count}"></td>
+        <td th:text="${product.id}"></td>
+        <td th:text="${product.ten}"></td>
+        <td th:text="${product.gia}"></td>
+        <td th:text="${product.moTa}"></td>
+        <td>
+            <span th:each="item:${product.nhaSX}" th:text="${item}"></span>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
