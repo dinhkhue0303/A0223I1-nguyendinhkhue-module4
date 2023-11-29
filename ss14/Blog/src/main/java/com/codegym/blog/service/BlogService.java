@@ -46,7 +46,5 @@ public class BlogService implements IBlogService{
     public void remove(Integer id) {
         iBlogRepository.deleteById(id);
     }
-    public List<Blog> findBlogByCategory(Integer id_category){
-        return iBlogRepository.findBlogByCategory(id_category);
-    }
+
 }

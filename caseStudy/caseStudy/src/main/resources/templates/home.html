@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .head{
+            height: 120px;
+            border: 2px solid black;
+        }
+        .navbar{
+            border: 2px solid black;
+        }
+        .navbar a{
+            margin-left: 200px;
+        }
+        .content{
+            border: 2px solid black;
+            height: 500px;
+            text-align: center;
+        }
+        .footer{
+            height: 60px;
+            border: 2px solid black;
+        }
+        .im-lo {
+            float: left;
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            margin-top: 25px;
+            margin-left: 25px;
+        }
+        .logo{
+            margin-top: 50px;
+            margin-left: 10px;
+        }
+        .name{
+            margin-left: 1400px;
+            margin-top: 45px;
+        }
+        #welcome {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="head">
+        <div class="im-lo">
+            <div class="image">
+
+            </div>
+            <div class="logo">
+                logo
+            </div>
+        </div>
+        <div class="name">
+            kkkkkkk
+        </div>
+    </div>
+    <div class="">
+        <nav class="navbar navbar-light bg-light" xmlns:th="http://www.thymeleaf.org">
+            <form class="container-fluid justify-content-start">
+                <a th:href="@{/home}" class="btn btn-sm btn-outline-secondary">Home</a>
+                <a th:href="@{/customer/list}" class="btn btn-sm btn-outline-secondary">Customer</a>
+                <a th:href="@{/facility/list}" class="btn btn-sm btn-outline-secondary">Service</a>
+                <a th:href="@{/contract/list}" class="btn btn-sm btn-outline-secondary">Contract</a>
+            </form>
+        </nav>
+    </div>
+    <!--    <div class="navbar" th:include="/_menu">-->
+    <!--    </div>-->
+    <div class="content">
+            <p id="welcome" th:text="${mess}"></p>
+    </div>
+    <div class="footer">
+
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

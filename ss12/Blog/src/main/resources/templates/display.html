@@ -53,12 +53,19 @@
     </tbody>
 </table>
 <button id="btn-more" class="btn btn-primary">More</button>
+<button id="btn-list" class="btn btn-primary">List</button>
 <script>
     let page = 0;
     $(document).ready(function (){
         displayPage(page);
         $("#btn-more").click(function (){
             page++;
+            displayPage(page);
+        })
+        $("#btn-list").click(function (){
+            let content = "";
+            $("#content").html(content);
+            page = 0;
             displayPage(page);
         })
         $("#btn-search").click(function (){

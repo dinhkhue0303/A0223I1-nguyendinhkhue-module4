@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+<a th:href="@{/question/list}" class="btn btn-primary">Back</a>
+<form th:object="${questionDto}" action="/question/create" method="post">
+  <div class="mb-3">
+    <label class="form-label">Question Type</label>
+    <select th:field="*{questionType}" class="form-select" aria-label="Default select example">
+      <option th:each="question:${questionTypeList}" th:value="${question.id}" th:text="${question.name}"></option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Title</label>
+    <input class="form-control" th:field="*{title}" placeholder="title" >
+    <small style="color: red" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></small>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Content</label>
+    <input class="form-control" th:field="*{content}" placeholder="title" >
+    <small style="color: red" th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></small>
+  </div>
+
+  <div class="mb-3">
+    <input type="hidden" class="form-control" th:field="*{answer}" >
+  </div>
+  <div class="mb-3">
+    <input type="hidden" class="form-control" th:field="*{status}" >
+  </div>
+  <div class="mb-3">
+    <input type="hidden" class="form-control" th:field="*{dateCreate}"  >
+  </div>
+  <button class="btn btn-primary">Create</button>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

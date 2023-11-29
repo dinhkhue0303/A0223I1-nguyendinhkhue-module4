@@ -11,7 +11,6 @@ public class AccountDto {
     @Size(min = 5,max = 45)
     private String firstName;
     @Size(min = 5,max = 45)
-
     private String lastName;
     @Pattern(regexp = "^\\d{10}$", message = "số điện thoại không hợp lệ")
     private String phoneNumber;

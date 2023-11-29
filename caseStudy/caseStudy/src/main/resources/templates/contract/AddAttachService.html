@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+<a th:href="@{/contract/list}" class="btn btn-primary">Back</a>
+<form th:object="${contractDetailDto}" action="/contract/addAttachService" method="post">
+    <input type="hidden" th:field="*{contract}" id="contract">
+    <input type="hidden" th:value="${ContractId}" id="ContractId">
+    <div class="mb-3">
+        <label class="form-label">contract id</label>
+        <input disabled class="form-control" th:value="${ContractId}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">attach facility id</label>
+        <select th:field="*{attachFacility}" class="form-select" aria-label="Default select example">
+            <option th:each="item:${NotAttachFacilityList}" th:value="${item.id}" th:text="${item.name}"></option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">quantity</label>
+        <input class="form-control" th:field="*{quantity}">
+        <small style="color: red" th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}"></small>
+    </div>
+    <button class="btn btn-primary">Add</button>
+</form>
+<script>
+    var contract = document.getElementById("ContractId").value;
+    document.getElementById("contract").value = contract;
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
