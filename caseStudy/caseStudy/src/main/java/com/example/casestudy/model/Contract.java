@@ -3,6 +3,7 @@ package com.example.casestudy.model;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -11,8 +12,8 @@ public class Contract {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private LocalDateTime startDate;
-    private LocalDateTime endDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
     private double depost;
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
@@ -26,7 +27,7 @@ public class Contract {
     public Contract() {
     }
 
-    public Contract(Long id, LocalDateTime startDate, LocalDateTime endDate, double depost, Customer customer, Facility facility, Set<ContractDetail> contractDetailSet) {
+    public Contract(Long id, LocalDate startDate, LocalDate endDate, double depost, Customer customer, Facility facility, Set<ContractDetail> contractDetailSet) {
         this.id = id;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -44,21 +45,22 @@ public class Contract {
         this.id = id;
     }
 
-    public LocalDateTime getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    public void setStartDate(LocalDateTime startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDateTime getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    public void setEndDate(LocalDateTime endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
+
 
     public double getDepost() {
         return depost;

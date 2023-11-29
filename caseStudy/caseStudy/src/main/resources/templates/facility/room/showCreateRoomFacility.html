@@ -21,6 +21,7 @@
     <div class="mb-3">
         <label class="form-label">Name</label>
         <input class="form-control" th:field="*{name}" placeholder="name">
+        <small style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></small>
     </div>
     <div class="mb-3">
         <label class="form-label">Area</label>
@@ -29,6 +30,7 @@
     <div class="mb-3">
         <label class="form-label">cost</label>
         <input class="form-control" th:field="*{cost}" placeholder="cost">
+        <small style="color:red;" th:if="${#fields.hasErrors('cost')}" th:errors="*{cost}"></small>
     </div>
     <div class="mb-3">
         <label class="form-label">max_people</label>

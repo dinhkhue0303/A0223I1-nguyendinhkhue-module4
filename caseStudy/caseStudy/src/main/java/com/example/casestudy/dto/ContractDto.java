@@ -7,13 +7,14 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Min;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class ContractDto {
     //Lương, Giá, Tiền đặt cọc phải là số dương.
     private Long id;
-    private LocalDateTime startDate;
-    private LocalDateTime endDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
     @Min(0)
     private double depost;
     private Customer customer;
@@ -23,7 +24,7 @@ public class ContractDto {
     public ContractDto() {
     }
 
-    public ContractDto(Long id, LocalDateTime startDate, LocalDateTime endDate, double depost, Customer customer, Facility facility) {
+    public ContractDto(Long id, LocalDate startDate, LocalDate endDate, double depost, Customer customer, Facility facility) {
         this.id = id;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -40,21 +41,22 @@ public class ContractDto {
         this.id = id;
     }
 
-    public LocalDateTime getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    public void setStartDate(LocalDateTime startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDateTime getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    public void setEndDate(LocalDateTime endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
+
 
     public double getDepost() {
         return depost;

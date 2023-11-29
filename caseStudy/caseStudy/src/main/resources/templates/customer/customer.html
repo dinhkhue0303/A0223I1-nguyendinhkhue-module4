@@ -116,8 +116,7 @@
                     <td th:text="${loop.count}"></td>
                     <td th:text="${customer.customerType.id}"></td>
                     <td th:text="${customer.name}"></td>
-<!--                    <td th:text="${#dates.format(customer.birth, 'dd-MM-yyyy')}"></td>-->
-                    <td th:text="${customer.birth}"></td>
+                    <td th:text="${#temporals.format(customer.birth, 'dd-MM-yyyy')}"></td>
                     <td th:text="${customer.gender}"></td>
                     <td th:text="${customer.idCart}"></td>
                     <td th:text="${customer.phoneNumber}"></td>

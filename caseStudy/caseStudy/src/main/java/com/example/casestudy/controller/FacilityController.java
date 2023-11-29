@@ -60,8 +60,7 @@ public class FacilityController {
         return "facility/house/showCreateHouseFacility";
     }
     @PostMapping("/create")
-    public String Create(@Valid @ModelAttribute FacilityDto facilityDto, RedirectAttributes redirectAttributes,
-                         BindingResult bindingResult, Model model){
+    public String Create(@Valid @ModelAttribute FacilityDto facilityDto, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model){
         if(bindingResult.hasErrors()){
             model.addAttribute("facilityDto",facilityDto);
             List<RentType> rentTypeList = iRentTypeService.findAll();
@@ -95,8 +94,7 @@ public class FacilityController {
         return "facility/house/showUpdateHouseFacility";
     }
     @PostMapping("/update")
-    public String Update(@Valid @ModelAttribute FacilityDto facilityDto, RedirectAttributes redirectAttributes,
-                         BindingResult bindingResult, Model model){
+    public String Update(@Valid @ModelAttribute FacilityDto facilityDto, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model){
         if(bindingResult.hasErrors()){
             model.addAttribute("facilityDto",facilityDto);
             List<RentType> rentTypeList = iRentTypeService.findAll();

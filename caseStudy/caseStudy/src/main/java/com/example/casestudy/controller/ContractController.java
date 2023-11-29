@@ -52,8 +52,7 @@ public class ContractController {
         return "contract/showCreateContract";
     }
     @PostMapping("/create")
-    public String Create(@Valid @ModelAttribute ContractDto contractDto, RedirectAttributes redirectAttributes,
-                         BindingResult bindingResult, Model model){
+    public String Create(@Valid @ModelAttribute ContractDto contractDto, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model){
         if(bindingResult.hasErrors()){
             model.addAttribute("contractDto",contractDto);
             List<Customer> customerList = icustomerService.findAll();
@@ -84,7 +83,7 @@ public class ContractController {
         return "contract/AddAttachService";
     }
     @PostMapping("/addAttachService")
-    public String AddAttachService(@Valid @ModelAttribute ContractDetailDto contractDetailDto, Model model,BindingResult bindingResult){
+    public String AddAttachService(@Valid @ModelAttribute ContractDetailDto contractDetailDto, BindingResult bindingResult, Model model){
         if(contractDetailDto.getAttachFacility() == null){
             model.addAttribute("ContractId",contractDetailDto.getContract().getId());
             return "error_isEmty";
